@@ -432,3 +432,72 @@ footer .social-links{margin:0;justify-content:flex-start}
 @keyframes phoneFloatMobileReturn{0%,100%{translate:0 0}50%{translate:0 -15px}}
 @media(max-width:700px){.social-links{gap:8px;margin-top:20px}.social-link{font-size:10px;padding:8px 10px}footer .social-links{grid-row:2;justify-content:center;margin:4px 0 12px}}
 @media(prefers-reduced-motion:reduce){.social-link,.social-link svg{transition:none}.social-link:hover{transform:none}}
+
+/* Responsive audit: phone-first layout and copy alignment; all layout overrides stay below 700px. */
+.link-icon{display:inline-flex;align-items:center;justify-content:center;width:1em;height:1em;line-height:1;vertical-align:middle;flex:none}
+.icon-arrow{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.freedom-symbol .link-icon{width:1em;height:1em}
+.back-top .link-icon{width:1.15em;height:1.15em;margin-left:4px}
+@media(max-width:700px){
+  .nav{gap:7px;padding-left:4%;padding-right:4%}
+  .nav .brand{min-width:0;gap:7px;font-size:clamp(9px,2.75vw,11px);letter-spacing:.08em}
+  .nav .brand-mark{font-size:27px}
+  .nav .brand small{font-size:7px;letter-spacing:.08em}
+  .nav .nav-cta{min-height:38px;padding:7px 9px;font-size:9px}
+  .nav .nav-cta span{margin-left:5px}
+  .menu-toggle{min-width:40px;min-height:40px;justify-items:center;align-content:center}
+
+  .hero{height:auto;min-height:760px;padding:108px 6% 58px;display:block;overflow:hidden}
+  .hero-copy{width:57%;max-width:none}
+  .hero-brand-title{font-size:clamp(42px,11.8vw,52px)!important;line-height:.9!important;max-width:none;padding-right:0;letter-spacing:-.05em!important;margin:20px 0 13px!important}
+  .hero-tagline{font-size:clamp(6px,1.8vw,7px);letter-spacing:.08em;white-space:nowrap}
+  .hero-copy>p{width:100%;max-width:none;margin:18px 0 0;text-align:justify;hyphens:auto;-webkit-hyphens:auto;font-size:12px;line-height:1.62}
+  .hero-actions{width:100%;max-width:205px;display:flex;flex-direction:column;align-items:stretch;gap:8px;margin-top:18px}
+  .hero-actions .btn,.hero-actions .text-link{width:100%;min-height:44px;justify-content:center;gap:10px;padding:11px 8px;font-size:10px}
+  .chart-scene{width:39%;height:clamp(275px,74vw,315px);min-height:0;top:235px;right:5%;bottom:auto;transform:none;opacity:1;overflow:visible;padding:0;border:0;background:none;box-shadow:none;animation:none}
+  .phone{width:100%;height:100%;right:0;top:0;margin:0;aspect-ratio:.51;transform:rotate(5deg);transform-origin:center}
+  .phone-screen{height:100%}
+  .hero-foot{top:auto;left:0;bottom:-292px;width:calc(100vw - 44px);font-size:7px}
+  .scroll-cue{display:none}
+
+  .about-copy h2,.philosophy-main h2,.freedom-intro h2{text-align:center;text-wrap:balance}
+  .about-copy>p:not(.about-years),.philosophy-main p,.freedom-intro p,.freedom-concepts small,.learning-stage .week-content>p{max-width:100%;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .about-copy h2{margin-left:auto;margin-right:auto}
+  .philosophy-main{text-align:center}
+  .philosophy-main p{margin-left:auto;margin-right:auto}
+  .freedom-intro{text-align:center}
+  .freedom-intro p{margin-left:auto;margin-right:auto}
+  .freedom-concepts small{grid-column:2}
+}
+
+/* Mobile audit follow-up: keep the phone clear of copy and controls. */
+@media(max-width:700px){
+  .hero-copy{width:54%}
+  .chart-scene{width:37%;height:340px;right:3%;top:244px}
+  .phone{width:140px!important;max-width:none!important;height:100%!important;right:0;top:0;aspect-ratio:auto}
+  .phone-content{position:relative;width:111.12%;margin-left:-5.56%;transform:scale(.9);transform-origin:top center}
+}
+@media(max-width:360px){
+  .hero-copy{width:50%}
+  .chart-scene{width:39%;height:330px}
+  .phone{width:130px!important}
+}
+@media(max-width:700px){
+  .phone-current-price{top:auto;right:4px;bottom:4px;padding:2px 4px;font-size:4px;letter-spacing:.02em;opacity:.82}
+  .phone-asset-card{width:calc(100% + 8px);margin-left:-4px;padding:8px 11px 8px 8px}
+  .positions-head,.position-row,.positions-total{gap:4px}
+  .position-row,.positions-total{display:grid!important;grid-template-columns:minmax(0,1fr) auto}
+  .position-row>span{min-width:0;overflow:hidden}
+  .position-row strong{font-size:7px!important}
+  .positions-total>span{font-size:5.5px!important}
+  .positions-total strong{font-size:8px!important}
+  .phone-instrument b{font-size:11px}
+  .phone-instrument small{font-size:8.5px}
+  .positions-head>span{font-size:5px}
+  .phone-monogram{width:32px;height:32px;font-size:11.5px}
+  .phone-timeframes span,.phone-timeframes b{font-size:7px;padding:4px 6px}
+  .phone-chart>svg,.phone-chart .candles{transform:scale(1.12);transform-origin:center center}
+}
+@media(min-width:701px){
+  .hero-copy>p{text-align:justify;text-justify:inter-word}
+}
