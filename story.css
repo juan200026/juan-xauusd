@@ -473,16 +473,20 @@ footer .social-links{margin:0;justify-content:flex-start}
 /* Mobile audit follow-up: keep the phone clear of copy and controls. */
 @media(max-width:700px){
   .hero-copy{width:54%}
-  .chart-scene{width:37%;height:340px;right:3%;top:244px}
+  .chart-scene{width:37%;height:326px;right:3%;top:244px}
   .phone{width:140px!important;max-width:none!important;height:100%!important;right:0;top:0;aspect-ratio:auto}
   .phone-content{position:relative;width:111.12%;margin-left:-5.56%;transform:scale(.9);transform-origin:top center}
 }
 @media(max-width:360px){
   .hero-copy{width:50%}
-  .chart-scene{width:39%;height:330px}
+  .chart-scene{width:39%;height:316px}
   .phone{width:130px!important}
 }
 @media(max-width:700px){
+  .phone-screen{padding-top:11px}
+  .phone-status{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;height:21px;padding:0 4px}
+  .phone-status span{white-space:nowrap}
+  .phone-notch{top:6px!important;width:44px!important;height:14px!important}
   .phone-current-price{top:auto;right:4px;bottom:4px;padding:2px 4px;font-size:4px;letter-spacing:.02em;opacity:.82}
   .phone-asset-card{width:calc(100% + 8px);margin-left:-4px;padding:8px 11px 8px 8px}
   .positions-head,.position-row,.positions-total{gap:4px}
