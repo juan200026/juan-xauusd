@@ -295,48 +295,6 @@ if (gsapReady) {
           .fromTo('[data-service-card]', { y: 16, autoAlpha: 0.82 }, { y: 0, autoAlpha: 1, duration: 0.9, stagger: 0.34, ease: 'power2.out' }, '-=0.1')
           .fromTo('[data-price]', { y: 6, autoAlpha: 0.9 }, { y: 0, autoAlpha: 1, duration: 0.38, stagger: 0.12, ease: 'power2.out' }, '-=0.5');
       }
-      const philosophy = document.querySelector('#filosofia');
-      if (philosophy) {
-        const principles = gsap.utils.toArray('.principles > div');
-        const philosophyStory = gsap.timeline({ scrollTrigger: {
-          trigger: philosophy, start: 'top 78%', end: 'top 16%', scrub: 0.9, invalidateOnRefresh: true
-        }});
-        philosophyStory
-          .fromTo('.philosophy-main .gold-rule', { scaleX: 0, transformOrigin: 'center' }, {
-            scaleX: 1, duration: 0.35, ease: 'none'
-          })
-          .fromTo('.principles', { borderTopColor: 'rgba(255,255,255,0)' }, {
-            borderTopColor: 'rgba(255,255,255,.18)', duration: 0.5, ease: 'none'
-          }, 0.92)
-          .fromTo('.philosophy-main h2', { y: 22, autoAlpha: 0.25, clipPath: 'inset(0 0 58% 0)' }, {
-            y: 0, autoAlpha: 1, clipPath: 'inset(0 0 -5% 0)', duration: 0.82, ease: 'power2.out'
-          }, 0.18)
-          .fromTo('.philosophy-main p', { y: 12, autoAlpha: 0.3 }, {
-            y: 0, autoAlpha: 1, duration: 0.44, ease: 'power2.out'
-          }, 0.65);
-        principles.forEach((principle, index) => {
-          const at = 1.12 + index * 0.42;
-          philosophyStory
-            .fromTo(principle.querySelector('span'), { y: 7, autoAlpha: 0.25 }, {
-              y: 0, autoAlpha: 1, duration: 0.22, ease: 'power2.out'
-            }, at)
-            .fromTo(principle.querySelector('b'), { y: 9, autoAlpha: 0.3 }, {
-              y: 0, autoAlpha: 1, duration: 0.26, ease: 'power2.out'
-            }, at + 0.16)
-            .fromTo(principle.querySelector('small'), { y: 8, autoAlpha: 0.25 }, {
-              y: 0, autoAlpha: 1, duration: 0.3, ease: 'power2.out'
-            }, at + 0.32);
-        });
-        philosophyStory.fromTo('.principles > div', { borderColor: 'rgba(255,255,255,.08)' }, {
-          borderColor: 'rgba(255,255,255,.22)', duration: 1.45, stagger: 0.38, ease: 'none'
-        }, 1.12);
-        gsap.to('.philosophy-bg', { xPercent: smallScreenMotion ? 2 : 4, yPercent: smallScreenMotion ? -1.5 : -3, ease: 'none', scrollTrigger: {
-          trigger: philosophy, start: 'top bottom', end: 'bottom top', scrub: 1.2
-        }});
-      }
-      gsap.fromTo('.analysis-sequence', { y: 12, autoAlpha: 0.3 }, { y: 0, autoAlpha: 1, duration: 0.7,
-        scrollTrigger: { trigger: '.analysis-sequence', start: 'top 88%', once: true }
-      });
       gsap.fromTo('.about-copy > p, .about-copy blockquote', { y: 18, autoAlpha: 0 }, {
         y: 0, autoAlpha: 1, duration: 0.75, stagger: 0.1, ease: 'power3.out',
         scrollTrigger: { trigger: '#sobre-mi', start: 'top 70%', once: true }
